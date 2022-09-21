@@ -63,3 +63,17 @@ func RandStrSimple(l int) string {
 	}
 	return sb.String()
 }
+func RandStrSimpleSlice(l int) string {
+	// 预设字符集合
+	const digits = "0123456789"
+	const letters = "abcdefghijklmnopqrstuvwxyz"
+	const bytes = digits + letters
+
+	bytesL := len(bytes)
+
+	sb := make([]byte, l)
+	for i := range sb {
+		sb[i] = bytes[rand.Intn(bytesL)]
+	}
+	return string(sb)
+}

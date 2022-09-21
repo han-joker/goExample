@@ -13,3 +13,8 @@ func BenchmarkRandStrSimple(b *testing.B) {
 		RandStrSimple(6)
 	}
 }
+func BenchmarkRandStrSimpleSlice(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		RandStrSimpleSlice(6)
+	}
+}
